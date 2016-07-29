@@ -1,0 +1,6 @@
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import "Masonry.h"
+#import "CoreData+MagicalRecord.h"
+#endif
+

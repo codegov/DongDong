@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
+    <entity name="StretchChat" representedClassName="StretchChat" syncable="YES">
+        <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="preMsgTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subtitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="messageList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StretchMessage" syncable="YES"/>
+    </entity>
+    <entity name="StretchMessage" representedClassName="StretchMessage" syncable="YES">
+        <attribute name="beginTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="bgIcon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="stepNum" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StretchChat" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="StretchChat" positionX="-45" positionY="0" width="128" height="120"/>
+        <element name="StretchMessage" positionX="-9" positionY="36" width="128" height="135"/>
+    </elements>
+</model>
