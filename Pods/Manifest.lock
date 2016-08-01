@@ -3,15 +3,18 @@ PODS:
     - MagicalRecord/Core (= 2.2)
   - MagicalRecord/Core (2.2)
   - Masonry (1.0.1)
+  - UMengAnalytics (4.0.4)
 
 DEPENDENCIES:
   - MagicalRecord
   - Masonry
+  - UMengAnalytics
 
 SPEC CHECKSUMS:
   MagicalRecord: 2dc87179ae7c1f2a274442624ec65a07d4357a6f
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  UMengAnalytics: 4ed421fb3bca63b26fc13c947743cabf3831d199
 
-PODFILE CHECKSUM: 49fccc78769adeeb892698b26413af54735e65c7
+PODFILE CHECKSUM: d100fa37435b42ae42b143f717d103137df32980
 
 COCOAPODS: 1.1.0.beta.1
