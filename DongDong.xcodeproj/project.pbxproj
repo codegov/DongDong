@@ -113,7 +113,6 @@
 		82C0DAC31D46F311008C26B0 /* DongDong */ = {
 			isa = PBXGroup;
 			children = (
-				82C0DBCB1D48A347008C26B0 /* DongDong.entitlements */,
 				82C0DAEA1D47344F008C26B0 /* Core */,
 				82C0DAC71D46F311008C26B0 /* AppDelegate.h */,
 				82C0DAC81D46F311008C26B0 /* AppDelegate.m */,
@@ -129,6 +128,7 @@
 		82C0DAC41D46F311008C26B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				82C0DBCB1D48A347008C26B0 /* DongDong.entitlements */,
 				82C0DB631D476C33008C26B0 /* DongDong-prefix.pch */,
 				82C0DAC51D46F311008C26B0 /* main.m */,
 			);
