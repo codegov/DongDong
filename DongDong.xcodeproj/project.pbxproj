@@ -29,6 +29,7 @@
 		82C0DBCA1D48A347008C26B0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C0DBC91D48A347008C26B0 /* HealthKit.framework */; };
 		82C0DBCD1D499A38008C26B0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C0DBCC1D499A38008C26B0 /* CoreLocation.framework */; };
 		82C0DBCF1D4A0842008C26B0 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C0DBCE1D4A0842008C26B0 /* CoreMotion.framework */; };
+		82E787501D6D7F5E0095D5B6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E7874F1D6D7F5E0095D5B6 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,8 @@
 		82C0DBCB1D48A347008C26B0 /* DongDong.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DongDong.entitlements; sourceTree = "<group>"; };
 		82C0DBCC1D499A38008C26B0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		82C0DBCE1D4A0842008C26B0 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		82E7874E1D6D7F5D0095D5B6 /* DongDong-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DongDong-Bridging-Header.h"; sourceTree = "<group>"; };
+		82E7874F1D6D7F5E0095D5B6 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		93223E35EB5850811F7201DB /* libPods-DongDong.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DongDong.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +138,7 @@
 		82C0DAEA1D47344F008C26B0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				82E7874D1D6D7F430095D5B6 /* Swift */,
 				82C0DB711D4848D2008C26B0 /* Model */,
 				82C0DB641D476E89008C26B0 /* Controller */,
 			);
@@ -185,6 +189,15 @@
 				82C0DBC71D48A081008C26B0 /* EditStretchChatController.m */,
 			);
 			path = Stretch;
+			sourceTree = "<group>";
+		};
+		82E7874D1D6D7F430095D5B6 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				82E7874F1D6D7F5E0095D5B6 /* TestViewController.swift */,
+				82E7874E1D6D7F5D0095D5B6 /* DongDong-Bridging-Header.h */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 		9FDD1019A65DEE5A3360AC00 /* Pods */ = {
@@ -337,6 +350,7 @@
 			files = (
 				82C0DBC01D486493008C26B0 /* SelectedStretchChatViewController.m in Sources */,
 				82C0DBBC1D48636D008C26B0 /* StretchMessage.m in Sources */,
+				82E787501D6D7F5E0095D5B6 /* TestViewController.swift in Sources */,
 				82C0DB6D1D476E89008C26B0 /* DynamicsViewController.m in Sources */,
 				82C0DAC91D46F311008C26B0 /* AppDelegate.m in Sources */,
 				82C0DBAA1D485963008C26B0 /* StretchModel.xcdatamodeld in Sources */,
@@ -463,16 +477,19 @@
 			baseConfigurationReference = 74B9B8F81BB503901FC77FBA /* Pods-DongDong.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = DongDong/DongDong.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "DongDong/DongDong-prefix.pch";
 				INFOPLIST_FILE = DongDong/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wenwen.DongDong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "DongDong/Core/Swift/DongDong-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -482,16 +499,18 @@
 			baseConfigurationReference = 1BA0DDBDAECCC90FED9DA486 /* Pods-DongDong.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = DongDong/DongDong.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "DongDong/DongDong-prefix.pch";
 				INFOPLIST_FILE = DongDong/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wenwen.DongDong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "DongDong/Core/Swift/DongDong-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

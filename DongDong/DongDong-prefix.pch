@@ -2,5 +2,6 @@
 #import <UIKit/UIKit.h>
 #import "Masonry.h"
 #import "CoreData+MagicalRecord.h"
+#import "DongDong-Swift.h"
 #endif
 

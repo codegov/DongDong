@@ -526,6 +526,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     [self queryStepCount];
+    
+    TestViewController *test = [[TestViewController alloc] init];
+    [self.navigationController pushViewController:test animated:YES];
 }
 
 @end
