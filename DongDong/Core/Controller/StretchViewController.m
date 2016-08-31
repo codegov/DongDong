@@ -13,8 +13,6 @@
 #import <CoreMotion/CoreMotion.h>
 #import <CFNetwork/CFNetwork.h>
 
-#import "WebViewController.h"
-
 @interface StretchViewController ()<CLLocationManagerDelegate>
 {
     CLLocationManager *_lm;
@@ -533,11 +531,8 @@
     NSDictionary *dic = (__bridge NSDictionary *)CFNetworkCopySystemProxySettings();
     NSLog(@"===dic===%@", dic);
     
-//    TestViewController *test = [[TestViewController alloc] init];
-//    [self.navigationController pushViewController:test animated:YES];
-    
-    WebViewController *web = [[WebViewController alloc] init];
-    [self.navigationController pushViewController:web animated:YES];
+    TestViewController *test = [[TestViewController alloc] init];
+    [self.navigationController pushViewController:test animated:YES];
 }
 
 @end
