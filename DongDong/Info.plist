@@ -55,6 +55,11 @@
 	<string>哈哈，允许读取，我们对您的服务会更好！</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>嘿嘿，允许读取，我们对您的服务会更好！</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

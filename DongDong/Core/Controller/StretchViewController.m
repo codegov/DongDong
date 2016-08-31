@@ -11,6 +11,9 @@
 #import <HealthKit/HealthKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <CoreMotion/CoreMotion.h>
+#import <CFNetwork/CFNetwork.h>
+
+#import "WebViewController.h"
 
 @interface StretchViewController ()<CLLocationManagerDelegate>
 {
@@ -527,8 +530,14 @@
     
     [self queryStepCount];
     
-    TestViewController *test = [[TestViewController alloc] init];
-    [self.navigationController pushViewController:test animated:YES];
+    NSDictionary *dic = (__bridge NSDictionary *)CFNetworkCopySystemProxySettings();
+    NSLog(@"===dic===%@", dic);
+    
+//    TestViewController *test = [[TestViewController alloc] init];
+//    [self.navigationController pushViewController:test animated:YES];
+    
+    WebViewController *web = [[WebViewController alloc] init];
+    [self.navigationController pushViewController:web animated:YES];
 }
 
 @end

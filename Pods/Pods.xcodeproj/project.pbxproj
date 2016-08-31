@@ -128,7 +128,6 @@
 		1745262CFE95F9F55AC7F1E50FA25A9B /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
 		1B4F9A041BE8487509FD1D08C2D5F694 /* NSManagedObjectModel+MagicalRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectModel+MagicalRecord.h"; path = "MagicalRecord/Categories/NSManagedObjectModel+MagicalRecord.h"; sourceTree = "<group>"; };
 		205EEF1DE3B1F058A59453FE3292CA56 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
-		22334D18D3CF1B86F887C0F40CD60E55 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = umsdk_IOS_analyics_idfa_v4.0.4/UMMobClick.framework; sourceTree = "<group>"; };
 		22DC56B175EBAD935C8AC62C4D66645B /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		2AC673E6C1AAF7BE0931A2E4B7FDC9BB /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CoreData+MagicalRecord.h"; path = "MagicalRecord/CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
 		2D65F29C9800291C070FF58793C991CF /* NSManagedObject+MagicalAggregation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+MagicalAggregation.h"; path = "MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalAggregation.h"; sourceTree = "<group>"; };
@@ -213,6 +212,7 @@
 		EFE304BE08B365AE5447652B627E7485 /* MagicalRecord+ShorthandSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MagicalRecord+ShorthandSupport.h"; path = "MagicalRecord/Core/MagicalRecord+ShorthandSupport.h"; sourceTree = "<group>"; };
 		F0E073C7700C68BAFF194261BEFFBFCE /* NSManagedObject+MagicalFinders.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+MagicalFinders.m"; path = "MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalFinders.m"; sourceTree = "<group>"; };
 		F3536F282E2F9F164CEC58B89CEF75FA /* NSManagedObject+MagicalFinders.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+MagicalFinders.h"; path = "MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalFinders.h"; sourceTree = "<group>"; };
+		F4CAE8878F15CC0EF9D7377DB2937AFA /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = umsdk_IOS_analyics_idfa_v4.1.0/UMMobClick.framework; sourceTree = "<group>"; };
 		FCBBF70946795333591F431F72168A5B /* NSManagedObject+MagicalDataImport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+MagicalDataImport.m"; path = "MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalDataImport.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -341,7 +341,7 @@
 		2A0A78E9AB522334C8DBE48BD6B5B4CD /* UMengAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				E2980DE50AAC278F0425C231579691D5 /* Frameworks */,
+				A5B57C2BB18006A781A7C12465165A70 /* Frameworks */,
 			);
 			path = UMengAnalytics;
 			sourceTree = "<group>";
@@ -421,6 +421,14 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		A5B57C2BB18006A781A7C12465165A70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4CAE8878F15CC0EF9D7377DB2937AFA /* UMMobClick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D003E6ACEB3FEC6ADCF97AF744645318 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,14 +437,6 @@
 				2A0A78E9AB522334C8DBE48BD6B5B4CD /* UMengAnalytics */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		E2980DE50AAC278F0425C231579691D5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				22334D18D3CF1B86F887C0F40CD60E55 /* UMMobClick.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E6221D20590DB7713879B9F03C22F0B1 /* Products */ = {

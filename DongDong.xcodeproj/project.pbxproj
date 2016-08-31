@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		52B02715BC3875A0AC892230 /* libPods-DongDong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93223E35EB5850811F7201DB /* libPods-DongDong.a */; };
+		82AEBC1E1D7059C5007F1ECD /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AEBC1D1D7059C5007F1ECD /* WebViewController.m */; };
+		82AEBC201D705DE5007F1ECD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AEBC1F1D705DE5007F1ECD /* WebKit.framework */; };
 		82C0DAC61D46F311008C26B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C0DAC51D46F311008C26B0 /* main.m */; };
 		82C0DAC91D46F311008C26B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C0DAC81D46F311008C26B0 /* AppDelegate.m */; };
 		82C0DAD21D46F312008C26B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C0DAD01D46F312008C26B0 /* Main.storyboard */; };
@@ -35,6 +37,9 @@
 /* Begin PBXFileReference section */
 		1BA0DDBDAECCC90FED9DA486 /* Pods-DongDong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DongDong.release.xcconfig"; path = "Pods/Target Support Files/Pods-DongDong/Pods-DongDong.release.xcconfig"; sourceTree = "<group>"; };
 		74B9B8F81BB503901FC77FBA /* Pods-DongDong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DongDong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DongDong/Pods-DongDong.debug.xcconfig"; sourceTree = "<group>"; };
+		82AEBC1C1D7059C5007F1ECD /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		82AEBC1D1D7059C5007F1ECD /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		82AEBC1F1D705DE5007F1ECD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		82C0DAC11D46F311008C26B0 /* DongDong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DongDong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C0DAC51D46F311008C26B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82C0DAC71D46F311008C26B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82AEBC201D705DE5007F1ECD /* WebKit.framework in Frameworks */,
 				82C0DBCF1D4A0842008C26B0 /* CoreMotion.framework in Frameworks */,
 				82C0DBCD1D499A38008C26B0 /* CoreLocation.framework in Frameworks */,
 				52B02715BC3875A0AC892230 /* libPods-DongDong.a in Frameworks */,
@@ -187,6 +193,8 @@
 				82C0DBBF1D486493008C26B0 /* SelectedStretchChatViewController.m */,
 				82C0DBC61D48A081008C26B0 /* EditStretchChatController.h */,
 				82C0DBC71D48A081008C26B0 /* EditStretchChatController.m */,
+				82AEBC1C1D7059C5007F1ECD /* WebViewController.h */,
+				82AEBC1D1D7059C5007F1ECD /* WebViewController.m */,
 			);
 			path = Stretch;
 			sourceTree = "<group>";
@@ -212,6 +220,7 @@
 		A35DB79D5ED1AD8C0C62E55B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82AEBC1F1D705DE5007F1ECD /* WebKit.framework */,
 				82C0DBCE1D4A0842008C26B0 /* CoreMotion.framework */,
 				82C0DBCC1D499A38008C26B0 /* CoreLocation.framework */,
 				82C0DBC91D48A347008C26B0 /* HealthKit.framework */,
@@ -359,6 +368,7 @@
 				82C0DAC61D46F311008C26B0 /* main.m in Sources */,
 				82C0DBBA1D48636D008C26B0 /* StretchChat.m in Sources */,
 				82C0DBC81D48A081008C26B0 /* EditStretchChatController.m in Sources */,
+				82AEBC1E1D7059C5007F1ECD /* WebViewController.m in Sources */,
 				82C0DB6E1D476E89008C26B0 /* MeViewController.m in Sources */,
 				82C0DBBB1D48636D008C26B0 /* StretchMessage+CoreDataProperties.m in Sources */,
 				82C0DBB91D48636D008C26B0 /* StretchChat+CoreDataProperties.m in Sources */,
