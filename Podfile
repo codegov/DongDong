@@ -7,5 +7,6 @@ target "DongDong" do
 pod 'MagicalRecord'
 pod 'Masonry'
 pod 'UMengAnalytics'
+pod 'XcodeCoverage'
 
 end

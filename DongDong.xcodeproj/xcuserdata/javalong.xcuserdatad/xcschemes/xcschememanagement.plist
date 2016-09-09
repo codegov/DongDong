@@ -9,9 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>DongDongTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>DongDongUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>82512AEC1D82636500183610</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>82512AFA1D82637900183610</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>82C0DAC01D46F311008C26B0</key>
 		<dict>
 			<key>primary</key>

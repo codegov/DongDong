@@ -4,17 +4,20 @@ PODS:
   - MagicalRecord/Core (2.2)
   - Masonry (1.0.1)
   - UMengAnalytics (4.1.0)
+  - XcodeCoverage (1.3.0)
 
 DEPENDENCIES:
   - MagicalRecord
   - Masonry
   - UMengAnalytics
+  - XcodeCoverage
 
 SPEC CHECKSUMS:
   MagicalRecord: 2dc87179ae7c1f2a274442624ec65a07d4357a6f
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   UMengAnalytics: 19b28253793d77dff10fb7d502faad1fb6b8ce4a
+  XcodeCoverage: 0ce3700a1ddb548680e7618cb72835a28d95d603
 
-PODFILE CHECKSUM: d100fa37435b42ae42b143f717d103137df32980
+PODFILE CHECKSUM: be40b20493678710a165117bb63c941d879249e1
 
 COCOAPODS: 1.1.0.beta.1

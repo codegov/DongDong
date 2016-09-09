@@ -10,4 +10,7 @@
 
 @interface StretchViewController : UITableViewController
 
++(int)getMaxNumber:(int)a b:(int)b c:(int)c;
+
 @end
+

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		52B02715BC3875A0AC892230 /* libPods-DongDong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93223E35EB5850811F7201DB /* libPods-DongDong.a */; };
+		82512AF01D82636500183610 /* DongDongUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82512AEF1D82636500183610 /* DongDongUITests.m */; };
+		82512AFE1D82637900183610 /* DongDongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82512AFD1D82637900183610 /* DongDongTests.m */; };
 		82AEBC201D705DE5007F1ECD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AEBC1F1D705DE5007F1ECD /* WebKit.framework */; };
 		82C0DAC61D46F311008C26B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C0DAC51D46F311008C26B0 /* main.m */; };
 		82C0DAC91D46F311008C26B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C0DAC81D46F311008C26B0 /* AppDelegate.m */; };
@@ -33,9 +35,32 @@
 		82E787501D6D7F5E0095D5B6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E7874F1D6D7F5E0095D5B6 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		82512AF21D82636500183610 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82C0DAB91D46F311008C26B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82C0DAC01D46F311008C26B0;
+			remoteInfo = DongDong;
+		};
+		82512B001D82637900183610 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82C0DAB91D46F311008C26B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82C0DAC01D46F311008C26B0;
+			remoteInfo = DongDong;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1BA0DDBDAECCC90FED9DA486 /* Pods-DongDong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DongDong.release.xcconfig"; path = "Pods/Target Support Files/Pods-DongDong/Pods-DongDong.release.xcconfig"; sourceTree = "<group>"; };
 		74B9B8F81BB503901FC77FBA /* Pods-DongDong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DongDong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DongDong/Pods-DongDong.debug.xcconfig"; sourceTree = "<group>"; };
+		82512AED1D82636500183610 /* DongDongUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DongDongUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82512AEF1D82636500183610 /* DongDongUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DongDongUITests.m; sourceTree = "<group>"; };
+		82512AF11D82636500183610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82512AFB1D82637900183610 /* DongDongTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DongDongTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82512AFD1D82637900183610 /* DongDongTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DongDongTests.m; sourceTree = "<group>"; };
+		82512AFF1D82637900183610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82AEBC1F1D705DE5007F1ECD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		82C0DAC11D46F311008C26B0 /* DongDong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DongDong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C0DAC51D46F311008C26B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,6 +105,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		82512AEA1D82636500183610 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82512AF81D82637900183610 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82C0DABE1D46F311008C26B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,10 +134,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82512AEE1D82636500183610 /* DongDongUITests */ = {
+			isa = PBXGroup;
+			children = (
+				82512AEF1D82636500183610 /* DongDongUITests.m */,
+				82512AF11D82636500183610 /* Info.plist */,
+			);
+			path = DongDongUITests;
+			sourceTree = "<group>";
+		};
+		82512AFC1D82637900183610 /* DongDongTests */ = {
+			isa = PBXGroup;
+			children = (
+				82512AFD1D82637900183610 /* DongDongTests.m */,
+				82512AFF1D82637900183610 /* Info.plist */,
+			);
+			path = DongDongTests;
+			sourceTree = "<group>";
+		};
 		82C0DAB81D46F311008C26B0 = {
 			isa = PBXGroup;
 			children = (
 				82C0DAC31D46F311008C26B0 /* DongDong */,
+				82512AEE1D82636500183610 /* DongDongUITests */,
+				82512AFC1D82637900183610 /* DongDongTests */,
 				82C0DAC21D46F311008C26B0 /* Products */,
 				9FDD1019A65DEE5A3360AC00 /* Pods */,
 				A35DB79D5ED1AD8C0C62E55B /* Frameworks */,
@@ -109,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				82C0DAC11D46F311008C26B0 /* DongDong.app */,
+				82512AED1D82636500183610 /* DongDongUITests.xctest */,
+				82512AFB1D82637900183610 /* DongDongTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,6 +288,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		82512AEC1D82636500183610 /* DongDongUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82512AF61D82636500183610 /* Build configuration list for PBXNativeTarget "DongDongUITests" */;
+			buildPhases = (
+				82512AE91D82636500183610 /* Sources */,
+				82512AEA1D82636500183610 /* Frameworks */,
+				82512AEB1D82636500183610 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82512AF31D82636500183610 /* PBXTargetDependency */,
+			);
+			name = DongDongUITests;
+			productName = DongDongUITests;
+			productReference = 82512AED1D82636500183610 /* DongDongUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		82512AFA1D82637900183610 /* DongDongTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82512B021D82637900183610 /* Build configuration list for PBXNativeTarget "DongDongTests" */;
+			buildPhases = (
+				82512AF71D82637900183610 /* Sources */,
+				82512AF81D82637900183610 /* Frameworks */,
+				82512AF91D82637900183610 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82512B011D82637900183610 /* PBXTargetDependency */,
+			);
+			name = DongDongTests;
+			productName = DongDongTests;
+			productReference = 82512AFB1D82637900183610 /* DongDongTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		82C0DAC01D46F311008C26B0 /* DongDong */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82C0DADB1D46F312008C26B0 /* Build configuration list for PBXNativeTarget "DongDong" */;
@@ -237,6 +334,7 @@
 				82C0DABF1D46F311008C26B0 /* Resources */,
 				E244BD54A5C84998FDB8AE1C /* [CP] Embed Pods Frameworks */,
 				D00145C2A06B49B51E53CEF9 /* [CP] Copy Pods Resources */,
+				82512B051D82642600183610 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,6 +354,14 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = javalong;
 				TargetAttributes = {
+					82512AEC1D82636500183610 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 82C0DAC01D46F311008C26B0;
+					};
+					82512AFA1D82637900183610 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 82C0DAC01D46F311008C26B0;
+					};
 					82C0DAC01D46F311008C26B0 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 5E25KMK5KR;
@@ -281,11 +387,27 @@
 			projectRoot = "";
 			targets = (
 				82C0DAC01D46F311008C26B0 /* DongDong */,
+				82512AEC1D82636500183610 /* DongDongUITests */,
+				82512AFA1D82637900183610 /* DongDongTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		82512AEB1D82636500183610 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82512AF91D82637900183610 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82C0DABF1D46F311008C26B0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,6 +422,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		82512B051D82642600183610 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = Pods/XcodeCoverage/exportenv.sh;
+			showEnvVarsInLog = 0;
+		};
 		BD8D3DEFA51B893E8D1FF670 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,6 +484,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		82512AE91D82636500183610 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82512AF01D82636500183610 /* DongDongUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82512AF71D82637900183610 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82512AFE1D82637900183610 /* DongDongTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82C0DABD1D46F311008C26B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,6 +524,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		82512AF31D82636500183610 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82C0DAC01D46F311008C26B0 /* DongDong */;
+			targetProxy = 82512AF21D82636500183610 /* PBXContainerItemProxy */;
+		};
+		82512B011D82637900183610 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82C0DAC01D46F311008C26B0 /* DongDong */;
+			targetProxy = 82512B001D82637900183610 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		82C0DAD01D46F312008C26B0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -392,6 +557,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		82512AF41D82636500183610 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DongDongUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.javalong.DongDongUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DongDong;
+			};
+			name = Debug;
+		};
+		82512AF51D82636500183610 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DongDongUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.javalong.DongDongUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DongDong;
+			};
+			name = Release;
+		};
+		82512B031D82637900183610 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DongDongTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.javalong.DongDongTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DongDong.app/DongDong";
+			};
+			name = Debug;
+		};
+		82512B041D82637900183610 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DongDongTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.javalong.DongDongTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DongDong.app/DongDong";
+			};
+			name = Release;
+		};
 		82C0DAD91D46F312008C26B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -485,6 +700,8 @@
 				CODE_SIGN_ENTITLEMENTS = DongDong/DongDong.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PREFIX_HEADER = "DongDong/DongDong-prefix.pch";
 				INFOPLIST_FILE = DongDong/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -507,6 +724,8 @@
 				CODE_SIGN_ENTITLEMENTS = DongDong/DongDong.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PREFIX_HEADER = "DongDong/DongDong-prefix.pch";
 				INFOPLIST_FILE = DongDong/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -522,6 +741,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		82512AF61D82636500183610 /* Build configuration list for PBXNativeTarget "DongDongUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82512AF41D82636500183610 /* Debug */,
+				82512AF51D82636500183610 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82512B021D82637900183610 /* Build configuration list for PBXNativeTarget "DongDongTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82512B031D82637900183610 /* Debug */,
+				82512B041D82637900183610 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		82C0DABC1D46F311008C26B0 /* Build configuration list for PBXProject "DongDong" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
