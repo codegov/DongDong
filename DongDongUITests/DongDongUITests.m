@@ -32,9 +32,16 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testExample
+{
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.navigationBars[@"运动"].buttons[@"添加"] tap];
+    XCTAssertEqualObjects(@"选择运动", app.navigationBars.element.identifier);
+    
+    [app.navigationBars[@"选择运动"].buttons[@"添加"] tap];
+    XCTAssertEqualObjects(@"新增运动", app.navigationBars.element.identifier);
 }
 
 @end
