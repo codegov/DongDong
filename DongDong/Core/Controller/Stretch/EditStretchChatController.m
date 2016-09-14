@@ -7,8 +7,9 @@
 //
 
 #import "EditStretchChatController.h"
+#import "DDTextField.h"
 
-@interface EditStretchChatController ()
+@interface EditStretchChatController ()<UITextFieldDelegate>
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
 
@@ -27,6 +28,10 @@
     return self;
 }
 
+- (void)receiveUITextFieldTextDidChangeNotification
+{
+//    [self.tableView reloadData];
+}
 
 - (void)viewDidLoad
 {
@@ -34,11 +39,50 @@
     
     self.tableView.tableFooterView = [[UIView alloc] init];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveUITextFieldTextDidChangeNotification) name:UITextFieldTextDidChangeNotification object:nil];
+    
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
     [dic setObject:@"header" forKey:@"type"];
     [dic setObject:@"图标" forKey:@"title"];
     [_dataArray addObject:dic];
     
+    dic = [[NSMutableDictionary alloc] init];
+    [dic setObject:@"name" forKey:@"type"];
+    [dic setObject:@"名称" forKey:@"title"];
+    [_dataArray addObject:dic];
+    
+    dic = [[NSMutableDictionary alloc] init];
+    [dic setObject:@"name" forKey:@"type"];
+    [dic setObject:@"名称" forKey:@"title"];
+    [_dataArray addObject:dic];
+    dic = [[NSMutableDictionary alloc] init];
+    [dic setObject:@"name" forKey:@"type"];
+    [dic setObject:@"名称" forKey:@"title"];
+    [_dataArray addObject:dic];
+    dic = [[NSMutableDictionary alloc] init];
+    [dic setObject:@"name" forKey:@"type"];
+    [dic setObject:@"名称" forKey:@"title"];
+    [_dataArray addObject:dic];
+    dic = [[NSMutableDictionary alloc] init];
+    [dic setObject:@"name" forKey:@"type"];
+    [dic setObject:@"名称" forKey:@"title"];
+    [_dataArray addObject:dic];
+    dic = [[NSMutableDictionary alloc] init];
+    [dic setObject:@"name" forKey:@"type"];
+    [dic setObject:@"名称" forKey:@"title"];
+    [_dataArray addObject:dic];
+    dic = [[NSMutableDictionary alloc] init];
+    [dic setObject:@"name" forKey:@"type"];
+    [dic setObject:@"名称" forKey:@"title"];
+    [_dataArray addObject:dic];
+    dic = [[NSMutableDictionary alloc] init];
+    [dic setObject:@"name" forKey:@"type"];
+    [dic setObject:@"名称" forKey:@"title"];
+    [_dataArray addObject:dic];
+    dic = [[NSMutableDictionary alloc] init];
+    [dic setObject:@"name" forKey:@"type"];
+    [dic setObject:@"名称" forKey:@"title"];
+    [_dataArray addObject:dic];
     dic = [[NSMutableDictionary alloc] init];
     [dic setObject:@"name" forKey:@"type"];
     [dic setObject:@"名称" forKey:@"title"];
@@ -73,7 +117,18 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:tempID];
     }
     NSDictionary  *dic = [_dataArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = [dic objectForKey:@"title"];
+//    cell.textLabel.text = [dic objectForKey:@"title"];
+    
+    DDTextField *textField =  [cell.contentView viewWithTag:99];
+    if (!textField) {
+        textField = [[DDTextField alloc] initWithFrame:CGRectMake(15, 0, tableView.frame.size.width - 30, 50)];
+        [cell.contentView addSubview:textField];
+    }
+    
+    textField.placeholder = [NSString stringWithFormat:@"%@-------%@",[dic objectForKey:@"title"] , @(indexPath.row)];
+    textField.tag = 99;
+    textField.delegate = self;
+    
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
