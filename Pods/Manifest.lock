@@ -1,23 +1,40 @@
 PODS:
+  - AsyncDisplayKit (1.9.90):
+    - AsyncDisplayKit/PINRemoteImage (= 1.9.90)
+  - AsyncDisplayKit/ASDealloc2MainObject (1.9.90)
+  - AsyncDisplayKit/Core (1.9.90):
+    - AsyncDisplayKit/ASDealloc2MainObject
+  - AsyncDisplayKit/PINRemoteImage (1.9.90):
+    - AsyncDisplayKit/Core
+    - PINRemoteImage/iOS (>= 3.0.0-beta.3)
   - MagicalRecord (2.2):
     - MagicalRecord/Core (= 2.2)
   - MagicalRecord/Core (2.2)
   - Masonry (1.0.1)
+  - PINCache (3.0.1-beta)
+  - PINRemoteImage/Core (3.0.0-beta.3):
+    - PINCache (>= 3.0.0-beta)
+  - PINRemoteImage/iOS (3.0.0-beta.3):
+    - PINRemoteImage/Core
   - UMengAnalytics (4.1.0)
   - XcodeCoverage (1.3.0)
 
 DEPENDENCIES:
+  - AsyncDisplayKit
   - MagicalRecord
   - Masonry
   - UMengAnalytics
   - XcodeCoverage
 
 SPEC CHECKSUMS:
+  AsyncDisplayKit: 926ded3ca3fb7026565e0e81f0e132fea4d3a6eb
   MagicalRecord: 2dc87179ae7c1f2a274442624ec65a07d4357a6f
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  PINCache: 6911fe422a633e18b3d3ddf2bd4f0e55e36e2892
+  PINRemoteImage: 308731aa6534500e58fc211b9cc2bb7252df25ba
   UMengAnalytics: 19b28253793d77dff10fb7d502faad1fb6b8ce4a
   XcodeCoverage: 0ce3700a1ddb548680e7618cb72835a28d95d603
 
-PODFILE CHECKSUM: be40b20493678710a165117bb63c941d879249e1
+PODFILE CHECKSUM: df576a0d66322a129526aeddc9d85404e86a31f9
 
 COCOAPODS: 1.1.0.beta.1

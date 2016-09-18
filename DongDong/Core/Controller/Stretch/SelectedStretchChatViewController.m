@@ -38,6 +38,14 @@
     [super viewDidLoad];
     
     self.tableView.tableFooterView = [[UIView alloc] init];
+    
+    ASNetworkImageNode *imageNode = [[ASNetworkImageNode alloc] init];
+    imageNode.URL = [NSURL URLWithString:@"https://s-media-cache-ak0.pinimg.com/originals/07/44/38/074438e7c75034df2dcf37ba1057803e.gif"];
+    imageNode.frame = self.view.bounds;
+    imageNode.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    imageNode.contentMode = UIViewContentModeScaleAspectFit;
+    
+    [self.view addSubnode:imageNode];
 
     UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addRightAction)];
     self.navigationItem.rightBarButtonItem = right;

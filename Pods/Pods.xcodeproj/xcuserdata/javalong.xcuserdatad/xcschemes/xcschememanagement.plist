@@ -4,12 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AsyncDisplayKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MagicalRecord.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PINCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PINRemoteImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,7 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FE671E20514CDA8814BC0ACE80251A9E</key>
+		<key>6EC48066A10459224CBD157FC4FB3F55</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F3B243A2117F94CD73AB6717D9B51A8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF7D4C36504DBC7E1D90B37B2D58CAB4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F767C8D86AE588542CF0ECBF7309D38F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

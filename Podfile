@@ -1,4 +1,4 @@
-platform :ios, '6.0'
+platform :ios, '7.0'
 #inhibit_all_warnings!
 #use_frameworks!
 
@@ -8,5 +8,6 @@ pod 'MagicalRecord'
 pod 'Masonry'
 pod 'UMengAnalytics'
 pod 'XcodeCoverage'
+pod 'AsyncDisplayKit'
 
 end
