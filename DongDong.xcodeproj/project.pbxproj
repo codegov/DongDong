@@ -11,6 +11,7 @@
 		821452E11D87F95B00BB8956 /* DDTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 821452E01D87F95B00BB8956 /* DDTextField.m */; };
 		82512AF01D82636500183610 /* DongDongUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82512AEF1D82636500183610 /* DongDongUITests.m */; };
 		82512AFE1D82637900183610 /* DongDongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82512AFD1D82637900183610 /* DongDongTests.m */; };
+		827330451D93C0BD009A096F /* DDLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 827330441D93C0BD009A096F /* DDLabel.m */; };
 		82AEBC201D705DE5007F1ECD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AEBC1F1D705DE5007F1ECD /* WebKit.framework */; };
 		82C0DAC61D46F311008C26B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C0DAC51D46F311008C26B0 /* main.m */; };
 		82C0DAC91D46F311008C26B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C0DAC81D46F311008C26B0 /* AppDelegate.m */; };
@@ -64,6 +65,8 @@
 		82512AFB1D82637900183610 /* DongDongTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DongDongTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82512AFD1D82637900183610 /* DongDongTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DongDongTests.m; sourceTree = "<group>"; };
 		82512AFF1D82637900183610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		827330431D93C0BD009A096F /* DDLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLabel.h; sourceTree = "<group>"; };
+		827330441D93C0BD009A096F /* DDLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLabel.m; sourceTree = "<group>"; };
 		82AEBC1F1D705DE5007F1ECD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		82C0DAC11D46F311008C26B0 /* DongDong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DongDong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C0DAC51D46F311008C26B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -256,6 +259,8 @@
 				82C0DBC71D48A081008C26B0 /* EditStretchChatController.m */,
 				821452DF1D87F95B00BB8956 /* DDTextField.h */,
 				821452E01D87F95B00BB8956 /* DDTextField.m */,
+				827330431D93C0BD009A096F /* DDLabel.h */,
+				827330441D93C0BD009A096F /* DDLabel.m */,
 			);
 			path = Stretch;
 			sourceTree = "<group>";
@@ -523,6 +528,7 @@
 				82C0DBC81D48A081008C26B0 /* EditStretchChatController.m in Sources */,
 				82C0DB6E1D476E89008C26B0 /* MeViewController.m in Sources */,
 				82C0DBBB1D48636D008C26B0 /* StretchMessage+CoreDataProperties.m in Sources */,
+				827330451D93C0BD009A096F /* DDLabel.m in Sources */,
 				82C0DBB91D48636D008C26B0 /* StretchChat+CoreDataProperties.m in Sources */,
 				82C0DB6F1D476E89008C26B0 /* RankViewController.m in Sources */,
 			);

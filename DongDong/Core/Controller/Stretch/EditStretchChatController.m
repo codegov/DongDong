@@ -8,6 +8,7 @@
 
 #import "EditStretchChatController.h"
 #import "DDTextField.h"
+#import "DDLabel.h"
 
 @interface EditStretchChatController ()<UITextFieldDelegate>
 
@@ -119,15 +120,15 @@
     NSDictionary  *dic = [_dataArray objectAtIndex:indexPath.row];
 //    cell.textLabel.text = [dic objectForKey:@"title"];
     
-    DDTextField *textField =  [cell.contentView viewWithTag:99];
+    DDLabel *textField =  [cell.contentView viewWithTag:99];
     if (!textField) {
-        textField = [[DDTextField alloc] initWithFrame:CGRectMake(15, 0, tableView.frame.size.width - 30, 50)];
+        textField = [[DDLabel alloc] initWithFrame:CGRectMake(15, 0, tableView.frame.size.width - 30, 50)];
         [cell.contentView addSubview:textField];
     }
     
-    textField.placeholder = [NSString stringWithFormat:@"%@-------%@",[dic objectForKey:@"title"] , @(indexPath.row)];
+    textField.text = [NSString stringWithFormat:@"%@-------%@",[dic objectForKey:@"title"] , @(indexPath.row)];
     textField.tag = 99;
-    textField.delegate = self;
+    textField.font = [UIFont systemFontOfSize:40];
     
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
