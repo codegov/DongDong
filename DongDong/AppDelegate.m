@@ -18,6 +18,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"DongDong.sqlite"];
+    
+    if (!_manager)
+    {
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"com.wenwen.DongDong.BackgroundSession"];//[NSURLSessionConfiguration defaultSessionConfiguration];
+        _manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    }
     return YES;
 }
 
@@ -42,6 +48,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     [MagicalRecord cleanUp];
+}
+
+- (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler
+{
+    NSLog(@"handleEventsForBackgroundURLSession");
+    self.backgroundSessionCompletionHandler = completionHandler;
 }
 
 @end

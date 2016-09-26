@@ -9,6 +9,7 @@
 #import "EditStretchChatController.h"
 #import "DDTextField.h"
 #import "DDLabel.h"
+#import "AppDelegate.h"
 
 @interface EditStretchChatController ()<UITextFieldDelegate>
 
@@ -90,6 +91,8 @@
     [_dataArray addObject:dic];
     
     [self.tableView reloadData];
+    
+    [self textRequest];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -149,5 +152,75 @@
         
     }
 }
+
+- (void)textRequest
+{
+    //    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    //    NSDictionary *parameters = @{@"foo": @"bar"};
+    //    NSURL *filePath = [NSURL fileURLWithPath:@"file://path/to/image.png"];
+    //    [manager POST:@"http://example.com/resources.json" parameters:parameters constructingBodyWithBlock:^(id<</b>AFMultipartFormData> formData) {
+    //        [formData appendPartWithFileURL:filePath name:@"image" error:nil];
+    //    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    //        NSLog(@"Success: %@", responseObject);
+    //    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    //        NSLog(@"Error: %@", error);
+    //    }];
+    
+    [self testDownload];
+}
+
+- (void)testDownload
+{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    AFURLSessionManager *manager = appDelegate.manager;
+    
+    NSURL *URL = [NSURL URLWithString:@"http://p.qpic.cn/wenwenpic/0/20160920164650-1363656770/0"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+        NSLog(@"downloadProgress==%@  %@", @(downloadProgress.totalUnitCount), @(downloadProgress.fractionCompleted));
+    } destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+        NSLog(@"url==%@", documentsDirectoryURL);
+        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        NSLog(@"File downloaded to: %@", filePath);
+        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+        localNotification.alertBody = @"You have been Download!";
+        [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        if (appDelegate.backgroundSessionCompletionHandler)
+        {
+            void (^completionHandler)() = appDelegate.backgroundSessionCompletionHandler;
+            appDelegate.backgroundSessionCompletionHandler = nil;
+            completionHandler();
+        }
+    }];
+    [downloadTask resume];
+}
+
+- (void)testUpload
+{
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    [manager invalidateSessionCancelingTasks:YES];
+    
+    NSURL *URL = [NSURL URLWithString:@"http://test.worldapi.wenwen.sogou.com/app/uploadpic"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *path = [[bundle resourcePath] stringByAppendingPathComponent:@"DongDong.entitlements"];
+    NSURL *filePath = [NSURL fileURLWithPath:path];
+    NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithRequest:request fromFile:filePath progress:nil completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            NSLog(@"Success: %@ %@", response, responseObject);
+        }
+    }];
+    [uploadTask resume];
+}
+
 
 @end

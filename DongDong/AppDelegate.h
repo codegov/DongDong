@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (nonatomic) void (^backgroundSessionCompletionHandler)();
+@property (nonatomic, strong) AFURLSessionManager *manager;
 
 @end
 
