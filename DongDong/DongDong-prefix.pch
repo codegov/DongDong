@@ -4,5 +4,6 @@
 #import "CoreData+MagicalRecord.h"
 #import "DongDong-Swift.h"
 #import <AsyncDisplayKit/AsyncDisplayKit.h>
+#import <AFNetworking/AFNetworking.h>
 #endif
 

@@ -43,6 +43,7 @@
     {
         [_lm startUpdatingLocation];//开启定位服务
     }
+    [self textRequest];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
@@ -551,6 +552,61 @@
             return c;
         }
     }
+}
+
+- (void)textRequest
+{
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    NSDictionary *parameters = @{@"foo": @"bar"};
+//    NSURL *filePath = [NSURL fileURLWithPath:@"file://path/to/image.png"];
+//    [manager POST:@"http://example.com/resources.json" parameters:parameters constructingBodyWithBlock:^(id<</b>AFMultipartFormData> formData) {
+//        [formData appendPartWithFileURL:filePath name:@"image" error:nil];
+//    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"Success: %@", responseObject);
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"Error: %@", error);
+//    }];
+    
+    [self testDownload];
+}
+
+- (void)testDownload
+{
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSURL *URL = [NSURL URLWithString:@"http://example.com/download.zip"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+        NSLog(@"url==%@", documentsDirectoryURL);
+        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        NSLog(@"File downloaded to: %@", filePath);
+    }];
+    [downloadTask resume];
+}
+
+- (void)testUpload
+{
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSURL *URL = [NSURL URLWithString:@"http://example.com/upload"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *path = [[bundle resourcePath] stringByAppendingPathComponent:@"DongDong.entitlements"];
+    NSURL *filePath = [NSURL fileURLWithPath:path];
+    NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithRequest:request fromFile:filePath progress:nil completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            NSLog(@"Success: %@ %@", response, responseObject);
+        }
+    }];
+    [uploadTask resume];
 }
 
 @end

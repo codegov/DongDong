@@ -9,5 +9,6 @@ pod 'Masonry'
 pod 'UMengAnalytics'
 pod 'XcodeCoverage'
 pod 'AsyncDisplayKit'
+pod 'AFNetworking'
 
 end
